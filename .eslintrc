@@ -2,6 +2,7 @@
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
+        "no-console": ["error", { allow: ["warn", "error"] }],
         "ecmaFeatures": {
             "jsx": 1,
         }
@@ -21,6 +22,7 @@
     },
     "globals": {
         "window": 1,
+        "require" : 1,
         "describe" : 1,
         "it" : 1,
         "expect" : 1

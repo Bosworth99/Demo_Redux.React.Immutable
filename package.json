@@ -4,6 +4,7 @@
   "description": "Demo project",
   "main": "index.js",
   "scripts": {
+    "start" : "babel-node index.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js  --recursive",
     "test:watch": "npm run test -- --watch"
   },
@@ -12,7 +13,7 @@
     "url": "git+https://github.com/Bosworth99/Demo_Redux.React.Immutable.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "josh@joshboswort.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Bosworth99/Demo_Redux.React.Immutable/issues"
@@ -35,5 +36,9 @@
     "presets": [
       "es2015"
     ]
+  },
+  "dependencies": {
+    "redux": "^3.5.2",
+    "socket.io": "^1.4.6"
   }
 }
