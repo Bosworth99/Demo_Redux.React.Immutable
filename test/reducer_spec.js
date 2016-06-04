@@ -3,7 +3,7 @@ import {expect} from 'chai';
 
 import {reducer} from '../src/reducer';
 
-describe('reducer', () => {
+describe('reducer | reducer_spec', () => {
 
     it('has an initial state', ()=>{
         const action = {type : 'SET_ENTRIES', entries : ['Trainspotting']};

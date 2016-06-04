@@ -3,7 +3,7 @@ import { expect } from 'chai';
 
 import { setEntries, next, vote } from '../src/core';
 
-describe('Application Logic', ()=>{
+describe('application logic | core_spec', ()=>{
 
     describe('setEntries', ()=>{
 

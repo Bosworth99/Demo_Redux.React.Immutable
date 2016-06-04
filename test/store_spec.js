@@ -3,7 +3,7 @@ import {expect} from 'chai';
 
 import makeStore from '../src/store';
 
-describe('store', ()=>{
+describe('store | store_spec', ()=>{
 
     it('is a Redux store configured with the correct reducer', ()=>{
         const store = makeStore();

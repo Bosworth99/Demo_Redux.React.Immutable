@@ -21,10 +21,13 @@
         }
     },
     "globals": {
+        "global":1,
         "window": 1,
         "require" : 1,
         "describe" : 1,
         "it" : 1,
-        "expect" : 1
+        "expect" : 1,
+        "module" : 1,
+        "__dirname" : 1
     }
 }
