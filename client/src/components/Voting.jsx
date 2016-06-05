@@ -1,11 +1,12 @@
 import React from 'react';
-
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import Winner from './Winner';
 import Vote from './Vote';
 
 export default React.createClass({
+    displayName : 'Component::Voting',
+    mixins : [PureRenderMixin],
     render : function(){
-        console.log('Voting::render');
         return <div>
             {this.props.winner ?
                 <Winner ref="winner" winner={this.props.winner} /> :
@@ -14,7 +15,3 @@ export default React.createClass({
         </div>;
     }
 });
-
-
-http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html
-Immutable Data And Pure Rendering

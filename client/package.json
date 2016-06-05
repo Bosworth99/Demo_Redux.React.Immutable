@@ -5,7 +5,7 @@
   "main": "index.jsx",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
-    "test:watch" : "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +29,8 @@
     ]
   },
   "dependencies": {
-    "immutable": "^3.8.1"
+    "immutable": "^3.8.1",
+    "react-addons-pure-render-mixin": "^15.1.0",
+    "react-router": "^2.0.0"
   }
 }

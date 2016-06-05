@@ -2,7 +2,8 @@
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
-        "no-console": ["error", { allow: ["warn", "error"] }],
+        "no-console": [0, { allow: ["warn", "error"] }],
+        "prop-types" : [0, {} ],
         "ecmaFeatures": {
             "jsx": 1,
         }
