@@ -1,11 +1,13 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+import { connect } from 'react-redux';
+import Winner from './Winner';
+import * as actionCreators from '../action_creators';
 
-export default React.createClass({
+export const Results = React.createClass({
     displayName : 'Component::Results',
     mixins : [PureRenderMixin],
     getPair : function(){
-        console.log(`Results::getPair pair : ${this.props.pair}`);
         return this.props.pair || [];
     },
     getVotes : function(entry){
@@ -15,15 +17,38 @@ export default React.createClass({
         return 0;
     },
     render : function(){
-        return <div className="results">
-            {this.getPair().map( entry =>
-                <div key={entry} className="entry">
-                    <h1>{entry}</h1>
-                    <div className="voteCount">
-                        {this.getVotes(entry)}
-                    </div>
+        return this.props.winner ?
+            <Winner ref="winner" winner={this.props.winner} /> :
+            <div className="results">
+                <div className="tally">
+                    {this.getPair().map( entry =>
+                        <div key={entry} className="entry">
+                            <h1>{entry}</h1>
+                            <div className="voteCount">
+                                {this.getVotes(entry)}
+                            </div>
+                        </div>
+                    )}
                 </div>
-            )}
-        </div>;
+                <div className="management">
+                    <button ref="next"
+                            className="next"
+                            onClick={this.props.next}>
+                    </button>
+                </div>
+            </div>
     }
 });
+
+function mapStateToProps(state){
+    return {
+        pair : state.getIn(['vote', 'pair']),
+        tally : state.getIn(['vote', 'tally']),
+        winner : state.get('winner')
+    }
+}
+
+export const ResultsContainer = connect(
+    mapStateToProps,
+    actionCreators
+)(Results);

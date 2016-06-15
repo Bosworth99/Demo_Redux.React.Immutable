@@ -2,8 +2,8 @@
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
-        "no-console": [0, { allow: ["warn", "error"] }],
-        "prop-types" : [0, {} ],
+        "no-console": [ 0 ],
+        "prop-types" : [ 0 ],
         "ecmaFeatures": {
             "jsx": 1,
         }
@@ -14,6 +14,8 @@
     "extends": ["eslint:recommended", "plugin:react/recommended"],
     "rules": {
         "comma-dangle" : 0,
+        "no-console": [ 0 ],
+        "prop-types" : [ 0 ]
     },
     "settings": {
         "react": {
@@ -22,13 +24,15 @@
         }
     },
     "globals": {
-        "global":1,
-        "window": 1,
+        "global" : 1,
+        "document" : 1,
+        "window" : 1,
         "require" : 1,
         "describe" : 1,
         "it" : 1,
         "expect" : 1,
         "module" : 1,
+        "location" : 1,
         "__dirname" : 1
     }
 }
